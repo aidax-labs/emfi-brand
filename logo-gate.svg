@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="symbol">
+    <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z"  fill="#0369A1"/>
+    <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#0EA5E9"/>
+  </g>
+  <g id="wordmark">
+    <text x="50" y="36" font-family="'Inter', -apple-system, sans-serif"
+          font-size="26" font-weight="600" fill="#0F172A" letter-spacing="-1">emfi</text>
+  </g>
+</svg>
