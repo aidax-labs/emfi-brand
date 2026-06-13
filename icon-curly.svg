@@ -1,0 +1,8 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- { left curly — green -->
+  <path d="M22,5 Q14,5 14,12 L14,20 Q14,24 8,24 Q14,24 14,28 L14,36 Q14,43 22,43"
+        stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- } right curly — cyan -->
+  <path d="M26,5 Q34,5 34,12 L34,20 Q34,24 40,24 Q34,24 34,28 L34,36 Q34,43 26,43"
+        stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

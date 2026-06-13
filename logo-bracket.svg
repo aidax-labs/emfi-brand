@@ -1,0 +1,14 @@
+<svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- [ -->
+  <rect x="2"  y="4"  width="11" height="4" fill="#12FF80"/>
+  <rect x="2"  y="4"  width="4"  height="44" fill="#12FF80"/>
+  <rect x="2"  y="44" width="11" height="4" fill="#12FF80"/>
+  <!-- emfi wordmark -->
+  <text x="20" y="38"
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+  <!-- ] -->
+  <rect x="107" y="4"  width="11" height="4" fill="#5FDDFF"/>
+  <rect x="114" y="4"  width="4"  height="44" fill="#5FDDFF"/>
+  <rect x="107" y="44" width="11" height="4" fill="#5FDDFF"/>
+</svg>

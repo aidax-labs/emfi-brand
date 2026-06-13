@@ -1,0 +1,12 @@
+<svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- { left curly — green -->
+  <path d="M18,4 Q10,4 10,11 L10,21 Q10,25 5,26 Q10,27 10,31 L10,41 Q10,48 18,48"
+        stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- emfi wordmark -->
+  <text x="26" y="38"
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+  <!-- } right curly — cyan -->
+  <path d="M113,4 Q121,4 121,11 L121,21 Q121,25 126,26 Q121,27 121,31 L121,41 Q121,48 113,48"
+        stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

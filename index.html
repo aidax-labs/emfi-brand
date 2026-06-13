@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>EmFi — Brand Identity</title>
+<title>EmFi — Brand Identity · Bracket Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --green:   #12FF80;
     --green-d: #0cb259;
@@ -19,233 +18,176 @@
     --border:  #636669;
     --white:   #FFFFFF;
   }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', monospace; }
 
-  body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    min-height: 100vh;
-  }
-
-  header {
-    padding: 36px 48px 28px;
-    border-bottom: 1px solid var(--surface);
-  }
-  .header-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-  }
-  .brand-name {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    color: var(--green);
-  }
-  .brand-tag { font-size: 13px; color: var(--border); font-weight: 400; }
-
-  .grad-line {
-    height: 2px;
-    background: linear-gradient(90deg, var(--green), var(--cyan));
-    opacity: .5;
-  }
+  header { padding: 36px 48px 28px; border-bottom: 1px solid var(--surface); }
+  .header-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: baseline; gap: 16px; }
+  .brand-name { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: var(--green); }
+  .brand-tag  { font-size: 13px; color: var(--border); }
+  .grad-line  { height: 2px; background: linear-gradient(90deg, var(--green), var(--cyan)); opacity:.45; }
 
   .section { max-width: 1280px; margin: 0 auto; padding: 0 48px 64px; }
   .section-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--border);
-    padding: 44px 0 24px;
+    font-size: 11px; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--border); padding: 44px 0 24px;
   }
 
   /* ── Concept grid ── */
-  .concept-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
+  .concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .concept-card {
-    background: var(--surface);
-    border-radius: 20px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,.06);
-    transition: border-color .2s;
+    background: var(--surface); border-radius: 20px; padding: 44px 32px 32px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    border: 1px solid rgba(255,255,255,.05); transition: border-color .2s;
   }
-  .concept-card:hover { border-color: rgba(18,255,128,.3); }
+  .concept-card:hover { border-color: rgba(18,255,128,.25); }
 
-  .icon-wrap {
-    width: 96px; height: 96px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 28px;
-  }
+  .icon-wrap { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; }
   .icon-wrap svg { width: 100%; height: 100%; }
 
+  .concept-sym {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px; font-weight: 600; margin-bottom: 8px;
+  }
   .concept-wordmark {
-    font-size: 26px; font-weight: 800; letter-spacing: -1px;
-    color: var(--white); margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 8px;
   }
-  .concept-name {
-    font-size: 13px; font-weight: 600; letter-spacing: .08em;
-    text-transform: uppercase; margin-bottom: 6px;
-  }
-  .concept-sub { font-size: 12px; color: var(--border); margin-bottom: 28px; }
+  .concept-sub { font-size: 12px; color: var(--border); margin-bottom: 28px; line-height: 1.5; }
 
-  /* Dark preview (since site is dark-only) */
-  .dark-preview {
-    background: var(--black);
-    border: 1px solid var(--surface);
-    border-radius: 12px;
-    padding: 16px 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  .small-preview {
+    background: var(--black); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 18px;
+    width: 100%; display: flex; align-items: center; gap: 14px;
   }
-  .dark-preview .icon-sm { width: 32px; height: 32px; flex-shrink: 0; }
-  .dark-preview .icon-sm svg { width: 100%; height: 100%; }
-  .dark-preview .wm-sm {
-    font-size: 18px; font-weight: 800; letter-spacing: -.8px;
-    color: var(--white);
+  .small-preview svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .small-preview .wm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 17px; font-weight: 600; color: var(--white);
   }
 
-  /* ── Logo lockups ── */
-  .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
+  /* ── Lockups ── */
+  .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .logo-card {
-    background: var(--surface);
-    border-radius: 16px; padding: 28px;
-    display: flex; flex-direction: column; gap: 12px;
-    border: 1px solid rgba(255,255,255,.06);
+    background: var(--surface); border-radius: 16px; padding: 24px;
+    border: 1px solid rgba(255,255,255,.05);
   }
-  .logo-dark  { background: var(--black); border-radius: 10px; padding: 18px; }
-  .logo-dark svg { width: 100%; height: auto; }
-  .logo-label { font-size: 11px; color: var(--border); letter-spacing: .06em; text-transform: uppercase; }
+  .logo-bg { background: var(--black); border-radius: 10px; padding: 20px; margin-top: 12px; }
+  .logo-bg svg { width: 100%; height: auto; }
+  .logo-label { font-size: 11px; color: var(--border); letter-spacing:.08em; text-transform: uppercase; }
+
+  /* ── Wordmark variations ── */
+  .wm-row {
+    display: flex; gap: 40px; flex-wrap: wrap; align-items: center;
+    background: var(--surface); border-radius: 16px; padding: 28px 36px;
+  }
+  .wm-item { display: flex; flex-direction: column; gap: 6px; }
+  .wm-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600; color: var(--green);
+  }
+  .wm-desc { font-size: 11px; color: var(--border); }
 
   /* ── Palette ── */
-  .palette-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .swatch-wrap { flex: 1; min-width: 100px; }
-  .swatch { height: 56px; border-radius: 10px; }
-  .swatch-label { margin-top: 8px; font-size: 12px; color: var(--border); }
-  .swatch-hex { font-family: 'SF Mono','Fira Code',monospace; font-size: 11px; color: var(--surface); }
+  .palette-row { display: flex; gap: 12px; }
+  .sw-wrap { flex:1; }
+  .sw { height: 52px; border-radius: 10px; }
+  .sw-label { margin-top:8px; font-size:12px; color:var(--border); }
+  .sw-hex { font-family: monospace; font-size:11px; color:var(--surface); }
 
-  /* ── Favicon test ── */
-  .favicon-row { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  /* ── Favicon ── */
+  .favicon-row { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
   .fav-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .fav-label { font-size: 11px; color: var(--border); }
-  .fav-bg { background: var(--black); border: 1px solid var(--surface); padding: 6px; border-radius: 6px; }
-  .fav-sep { width: 1px; height: 80px; background: var(--surface); margin: 0 16px; align-self: center; }
+  .fav-bg { background: var(--black); border: 1px solid var(--surface); padding: 5px; border-radius: 6px; display: flex; }
+  .fav-sep { width: 1px; height: 80px; background: var(--surface); margin: 0 12px; align-self: center; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <span class="brand-name">emfi</span>
-    <span class="brand-tag">Brand Identity · Silicon Valley Edition · emfi.dev</span>
+    <span class="brand-name">[emfi]</span>
+    <span class="brand-tag">Brand Identity · Bracket Concepts · emfi.dev</span>
   </div>
 </header>
 <div class="grad-line"></div>
 
 <div class="section">
 
-  <p class="section-title">Logo Concepts</p>
+  <p class="section-title">Concepts</p>
 
   <div class="concept-grid">
 
-    <!-- Concept 1: E-Mark -->
+    <!-- [ ] Square bracket -->
     <div class="concept-card">
       <div class="icon-wrap">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0">
-              <stop offset="0%" stop-color="#0cb259"/>
-              <stop offset="100%" stop-color="#12FF80"/>
-            </linearGradient>
-          </defs>
-          <rect x="6"  y="5"  width="9"  height="38" fill="url(#g1)"/>
-          <rect x="15" y="5"  width="27" height="9"  fill="url(#g1)"/>
-          <rect x="15" y="20" width="18" height="9"  fill="url(#g1)"/>
-          <rect x="15" y="34" width="27" height="9"  fill="url(#g1)"/>
+          <rect x="5"  y="5"  width="13" height="4" fill="#12FF80"/>
+          <rect x="5"  y="5"  width="4"  height="38" fill="#12FF80"/>
+          <rect x="5"  y="39" width="13" height="4" fill="#12FF80"/>
+          <rect x="30" y="5"  width="13" height="4" fill="#5FDDFF"/>
+          <rect x="39" y="5"  width="4"  height="38" fill="#5FDDFF"/>
+          <rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/>
         </svg>
       </div>
-      <div class="concept-wordmark">emfi</div>
-      <div class="concept-name" style="color:#12FF80">Mark</div>
-      <div class="concept-sub">Geometric letterform · Timeless</div>
-      <div class="dark-preview">
-        <div class="icon-sm">
-          <svg viewBox="0 0 48 48" fill="none">
-            <defs><linearGradient id="g1s" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#0cb259"/><stop offset="100%" stop-color="#12FF80"/></linearGradient></defs>
-            <rect x="6" y="5" width="9" height="38" fill="url(#g1s)"/>
-            <rect x="15" y="5" width="27" height="9" fill="url(#g1s)"/>
-            <rect x="15" y="20" width="18" height="9" fill="url(#g1s)"/>
-            <rect x="15" y="34" width="27" height="9" fill="url(#g1s)"/>
-          </svg>
-        </div>
-        <div class="wm-sm">emfi</div>
+      <div class="concept-sym" style="color:#12FF80">[ ]</div>
+      <div class="concept-wordmark">[emfi]</div>
+      <div class="concept-sub">Pure bracket · El contenedor<br/>Everything is embedded inside</div>
+      <div class="small-preview">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect x="5" y="5" width="13" height="4" fill="#12FF80"/><rect x="5" y="5" width="4" height="38" fill="#12FF80"/><rect x="5" y="39" width="13" height="4" fill="#12FF80"/>
+          <rect x="30" y="5" width="13" height="4" fill="#5FDDFF"/><rect x="39" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/>
+        </svg>
+        <div class="wm">[emfi]</div>
       </div>
     </div>
 
-    <!-- Concept 2: Slash -->
+    <!-- [/] Bracket + slash -->
     <div class="concept-card">
       <div class="icon-wrap">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="13,5 21,5 13,44 5,44"  fill="#12FF80"/>
-          <polygon points="27,5 35,5 27,44 19,44" fill="#5FDDFF"/>
-          <circle cx="33" cy="5" r="4" fill="#5FDDFF"/>
+          <rect x="4"  y="5"  width="10" height="4" fill="#12FF80"/>
+          <rect x="4"  y="5"  width="4"  height="38" fill="#12FF80"/>
+          <rect x="4"  y="39" width="10" height="4" fill="#12FF80"/>
+          <rect x="34" y="5"  width="10" height="4" fill="#5FDDFF"/>
+          <rect x="40" y="5"  width="4"  height="38" fill="#5FDDFF"/>
+          <rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/>
+          <polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/>
         </svg>
       </div>
-      <div class="concept-wordmark">emfi</div>
-      <div class="concept-name" style="color:#5FDDFF">Slash</div>
-      <div class="concept-sub">Developer · API-first · Forward</div>
-      <div class="dark-preview">
-        <div class="icon-sm">
-          <svg viewBox="0 0 48 48" fill="none">
-            <polygon points="13,5 21,5 13,44 5,44"  fill="#12FF80"/>
-            <polygon points="27,5 35,5 27,44 19,44" fill="#5FDDFF"/>
-            <circle cx="33" cy="5" r="4" fill="#5FDDFF"/>
-          </svg>
-        </div>
-        <div class="wm-sm">emfi</div>
+      <div class="concept-sym" style="color:#B0FFC9">[/]</div>
+      <div class="concept-wordmark">[/emfi]</div>
+      <div class="concept-sub">Bracket + route · API path<br/>Embedded at the routing layer</div>
+      <div class="small-preview">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect x="4" y="5" width="10" height="4" fill="#12FF80"/><rect x="4" y="5" width="4" height="38" fill="#12FF80"/><rect x="4" y="39" width="10" height="4" fill="#12FF80"/>
+          <rect x="34" y="5" width="10" height="4" fill="#5FDDFF"/><rect x="40" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/>
+          <polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/>
+        </svg>
+        <div class="wm">[/emfi]</div>
       </div>
     </div>
 
-    <!-- Concept 3: Arc -->
+    <!-- { } Curly braces -->
     <div class="concept-card">
       <div class="icon-wrap">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="ga3" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0">
-              <stop offset="0%" stop-color="#12FF80"/>
-              <stop offset="100%" stop-color="#5FDDFF"/>
-            </linearGradient>
-          </defs>
-          <path d="M4,38 A20,20 0 0,1 44,38"
-                stroke="url(#ga3)" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <path d="M22,5 Q14,5 14,12 L14,20 Q14,24 8,24 Q14,24 14,28 L14,36 Q14,43 22,43"
+                stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M26,5 Q34,5 34,12 L34,20 Q34,24 40,24 Q34,24 34,28 L34,36 Q34,43 26,43"
+                stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
       </div>
-      <div class="concept-wordmark">emfi</div>
-      <div class="concept-name" style="color:#5FDDFF">Arc</div>
-      <div class="concept-sub">Connect · Unified API · Bridge</div>
-      <div class="dark-preview">
-        <div class="icon-sm">
-          <svg viewBox="0 0 48 48" fill="none">
-            <defs><linearGradient id="ga3s" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#12FF80"/><stop offset="100%" stop-color="#5FDDFF"/></linearGradient></defs>
-            <path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#ga3s)" stroke-width="9" stroke-linecap="round" fill="none"/>
-          </svg>
-        </div>
-        <div class="wm-sm">emfi</div>
+      <div class="concept-sym" style="color:#5FDDFF">{ }</div>
+      <div class="concept-wordmark">{emfi}</div>
+      <div class="concept-sub">Curly brace · Code block<br/>Finance as a function call</div>
+      <div class="small-preview">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M22,5 Q14,5 14,12 L14,20 Q14,24 8,24 Q14,24 14,28 L14,36 Q14,43 22,43" stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M26,5 Q34,5 34,12 L34,20 Q34,24 40,24 Q34,24 34,28 L34,36 Q34,43 26,43" stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <div class="wm">{emfi}</div>
       </div>
     </div>
 
@@ -256,130 +198,100 @@
   <div class="logo-grid">
 
     <div class="logo-card">
-      <div class="logo-label">Mark</div>
-      <div class="logo-dark">
-        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="ll1" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="40" y2="0"><stop offset="0%" stop-color="#0cb259"/><stop offset="100%" stop-color="#12FF80"/></linearGradient></defs>
-          <rect x="4" y="3" width="8" height="46" fill="url(#ll1)"/>
-          <rect x="12" y="3" width="28" height="9" fill="url(#ll1)"/>
-          <rect x="12" y="21" width="20" height="9" fill="url(#ll1)"/>
-          <rect x="12" y="40" width="28" height="9" fill="url(#ll1)"/>
-          <text x="56" y="39" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+      <div class="logo-label">[ ] Square</div>
+      <div class="logo-bg">
+        <svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="11" height="4" fill="#12FF80"/><rect x="2" y="4" width="4" height="44" fill="#12FF80"/><rect x="2" y="44" width="11" height="4" fill="#12FF80"/>
+          <text x="20" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <rect x="107" y="4" width="11" height="4" fill="#5FDDFF"/><rect x="114" y="4" width="4" height="44" fill="#5FDDFF"/><rect x="107" y="44" width="11" height="4" fill="#5FDDFF"/>
         </svg>
       </div>
     </div>
 
     <div class="logo-card">
-      <div class="logo-label">Slash</div>
-      <div class="logo-dark">
-        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="9,5 17,5 9,47 1,47" fill="#12FF80"/>
-          <polygon points="22,5 30,5 22,47 14,47" fill="#5FDDFF"/>
-          <circle cx="28" cy="5" r="4" fill="#5FDDFF"/>
-          <text x="46" y="39" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+      <div class="logo-label">[/] Route</div>
+      <div class="logo-bg">
+        <svg viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="10" height="4" fill="#12FF80"/><rect x="2" y="4" width="4" height="44" fill="#12FF80"/><rect x="2" y="44" width="10" height="4" fill="#12FF80"/>
+          <polygon points="22,6 28,6 18,46 12,46" fill="#B0FFC9"/>
+          <text x="36" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <rect x="127" y="4" width="10" height="4" fill="#5FDDFF"/><rect x="133" y="4" width="4" height="44" fill="#5FDDFF"/><rect x="127" y="44" width="10" height="4" fill="#5FDDFF"/>
         </svg>
       </div>
     </div>
 
     <div class="logo-card">
-      <div class="logo-label">Arc</div>
-      <div class="logo-dark">
-        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="llga" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="46" y2="0"><stop offset="0%" stop-color="#12FF80"/><stop offset="100%" stop-color="#5FDDFF"/></linearGradient></defs>
-          <path d="M2,44 A22,22 0 0,1 46,44" stroke="url(#llga)" stroke-width="9" stroke-linecap="round" fill="none"/>
-          <text x="62" y="39" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+      <div class="logo-label">{ } Curly</div>
+      <div class="logo-bg">
+        <svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18,4 Q10,4 10,11 L10,21 Q10,25 5,26 Q10,27 10,31 L10,41 Q10,48 18,48" stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text x="26" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <path d="M113,4 Q121,4 121,11 L121,21 Q121,25 126,26 Q121,27 121,31 L121,41 Q121,48 113,48" stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
       </div>
     </div>
 
   </div>
 
-  <p class="section-title">Color Palette</p>
+  <p class="section-title">Wordmark Variations</p>
 
-  <div class="palette-row">
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:linear-gradient(135deg,#12FF80,#5FDDFF)"></div>
-      <div class="swatch-label">Gradient</div>
-      <div class="swatch-hex">#12FF80 → #5FDDFF</div>
+  <div class="wm-row">
+    <div class="wm-item">
+      <div class="wm-text" style="font-size:32px; letter-spacing:-1px">[emfi]</div>
+      <div class="wm-desc">Default</div>
     </div>
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:#12FF80"></div>
-      <div class="swatch-label">Primary</div>
-      <div class="swatch-hex">#12FF80</div>
+    <div class="wm-item">
+      <div class="wm-text" style="font-size:32px; letter-spacing:2px">[ emfi ]</div>
+      <div class="wm-desc">Spaced</div>
     </div>
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:#5FDDFF"></div>
-      <div class="swatch-label">Secondary</div>
-      <div class="swatch-hex">#5FDDFF</div>
+    <div class="wm-item">
+      <div class="wm-text" style="font-size:32px">[/emfi]</div>
+      <div class="wm-desc">Route</div>
     </div>
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:#121312;border:1px solid #303033"></div>
-      <div class="swatch-label">Background</div>
-      <div class="swatch-hex">#121312</div>
+    <div class="wm-item">
+      <div class="wm-text" style="font-size:32px">{emfi}</div>
+      <div class="wm-desc">Curly</div>
     </div>
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:#303033"></div>
-      <div class="swatch-label">Surface</div>
-      <div class="swatch-hex">#303033</div>
-    </div>
-    <div class="swatch-wrap">
-      <div class="swatch" style="background:#B0FFC9"></div>
-      <div class="swatch-label">Mint Tint</div>
-      <div class="swatch-hex">#B0FFC9</div>
+    <div class="wm-item">
+      <div class="wm-text" style="font-size:32px; color:#5FDDFF">[ <span style="color:#12FF80">emfi</span> ]</div>
+      <div class="wm-desc">Bicolor</div>
     </div>
   </div>
 
-  <p class="section-title">Favicon Scale Test</p>
+  <p class="section-title">Favicon Scale · [ ] concept</p>
 
   <div class="favicon-row">
     <div class="fav-item">
-      <div class="fav-bg"><svg width="64" height="64" viewBox="0 0 48 48"><defs><linearGradient id="f1a" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#0cb259"/><stop offset="100%" stop-color="#12FF80"/></linearGradient></defs><rect x="6" y="5" width="9" height="38" fill="url(#f1a)"/><rect x="15" y="5" width="27" height="9" fill="url(#f1a)"/><rect x="15" y="20" width="18" height="9" fill="url(#f1a)"/><rect x="15" y="34" width="27" height="9" fill="url(#f1a)"/></svg></div>
+      <div class="fav-bg"><svg width="64" height="64" viewBox="0 0 48 48"><rect x="5" y="5" width="13" height="4" fill="#12FF80"/><rect x="5" y="5" width="4" height="38" fill="#12FF80"/><rect x="5" y="39" width="13" height="4" fill="#12FF80"/><rect x="30" y="5" width="13" height="4" fill="#5FDDFF"/><rect x="39" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/></svg></div>
       <div class="fav-label">64px</div>
     </div>
     <div class="fav-item">
-      <div class="fav-bg"><svg width="32" height="32" viewBox="0 0 48 48"><defs><linearGradient id="f1b" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#0cb259"/><stop offset="100%" stop-color="#12FF80"/></linearGradient></defs><rect x="6" y="5" width="9" height="38" fill="url(#f1b)"/><rect x="15" y="5" width="27" height="9" fill="url(#f1b)"/><rect x="15" y="20" width="18" height="9" fill="url(#f1b)"/><rect x="15" y="34" width="27" height="9" fill="url(#f1b)"/></svg></div>
+      <div class="fav-bg"><svg width="32" height="32" viewBox="0 0 48 48"><rect x="5" y="5" width="13" height="4" fill="#12FF80"/><rect x="5" y="5" width="4" height="38" fill="#12FF80"/><rect x="5" y="39" width="13" height="4" fill="#12FF80"/><rect x="30" y="5" width="13" height="4" fill="#5FDDFF"/><rect x="39" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/></svg></div>
       <div class="fav-label">32px</div>
     </div>
     <div class="fav-item">
-      <div class="fav-bg"><svg width="16" height="16" viewBox="0 0 48 48"><defs><linearGradient id="f1c" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#0cb259"/><stop offset="100%" stop-color="#12FF80"/></linearGradient></defs><rect x="6" y="5" width="9" height="38" fill="url(#f1c)"/><rect x="15" y="5" width="27" height="9" fill="url(#f1c)"/><rect x="15" y="20" width="18" height="9" fill="url(#f1c)"/><rect x="15" y="34" width="27" height="9" fill="url(#f1c)"/></svg></div>
+      <div class="fav-bg"><svg width="16" height="16" viewBox="0 0 48 48"><rect x="5" y="5" width="13" height="4" fill="#12FF80"/><rect x="5" y="5" width="4" height="38" fill="#12FF80"/><rect x="5" y="39" width="13" height="4" fill="#12FF80"/><rect x="30" y="5" width="13" height="4" fill="#5FDDFF"/><rect x="39" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/></svg></div>
       <div class="fav-label">16px</div>
     </div>
-
     <div class="fav-sep"></div>
-
     <div class="fav-item">
-      <div class="fav-bg"><svg width="64" height="64" viewBox="0 0 48 48"><polygon points="13,5 21,5 13,44 5,44" fill="#12FF80"/><polygon points="27,5 35,5 27,44 19,44" fill="#5FDDFF"/><circle cx="33" cy="5" r="4" fill="#5FDDFF"/></svg></div>
-      <div class="fav-label">64px</div>
+      <div class="fav-bg"><svg width="64" height="64" viewBox="0 0 48 48"><rect x="4" y="5" width="10" height="4" fill="#12FF80"/><rect x="4" y="5" width="4" height="38" fill="#12FF80"/><rect x="4" y="39" width="10" height="4" fill="#12FF80"/><rect x="34" y="5" width="10" height="4" fill="#5FDDFF"/><rect x="40" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/><polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/></svg></div>
+      <div class="fav-label">64px [/]</div>
     </div>
     <div class="fav-item">
-      <div class="fav-bg"><svg width="32" height="32" viewBox="0 0 48 48"><polygon points="13,5 21,5 13,44 5,44" fill="#12FF80"/><polygon points="27,5 35,5 27,44 19,44" fill="#5FDDFF"/><circle cx="33" cy="5" r="4" fill="#5FDDFF"/></svg></div>
+      <div class="fav-bg"><svg width="32" height="32" viewBox="0 0 48 48"><rect x="4" y="5" width="10" height="4" fill="#12FF80"/><rect x="4" y="5" width="4" height="38" fill="#12FF80"/><rect x="4" y="39" width="10" height="4" fill="#12FF80"/><rect x="34" y="5" width="10" height="4" fill="#5FDDFF"/><rect x="40" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/><polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/></svg></div>
       <div class="fav-label">32px</div>
     </div>
     <div class="fav-item">
-      <div class="fav-bg"><svg width="16" height="16" viewBox="0 0 48 48"><polygon points="13,5 21,5 13,44 5,44" fill="#12FF80"/><polygon points="27,5 35,5 27,44 19,44" fill="#5FDDFF"/></svg></div>
-      <div class="fav-label">16px</div>
-    </div>
-
-    <div class="fav-sep"></div>
-
-    <div class="fav-item">
-      <div class="fav-bg"><svg width="64" height="64" viewBox="0 0 48 48"><defs><linearGradient id="fa64" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#12FF80"/><stop offset="100%" stop-color="#5FDDFF"/></linearGradient></defs><path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fa64)" stroke-width="9" stroke-linecap="round" fill="none"/></svg></div>
-      <div class="fav-label">64px</div>
-    </div>
-    <div class="fav-item">
-      <div class="fav-bg"><svg width="32" height="32" viewBox="0 0 48 48"><defs><linearGradient id="fa32" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#12FF80"/><stop offset="100%" stop-color="#5FDDFF"/></linearGradient></defs><path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fa32)" stroke-width="9" stroke-linecap="round" fill="none"/></svg></div>
-      <div class="fav-label">32px</div>
-    </div>
-    <div class="fav-item">
-      <div class="fav-bg"><svg width="16" height="16" viewBox="0 0 48 48"><defs><linearGradient id="fa16" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#12FF80"/><stop offset="100%" stop-color="#5FDDFF"/></linearGradient></defs><path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fa16)" stroke-width="9" stroke-linecap="round" fill="none"/></svg></div>
+      <div class="fav-bg"><svg width="16" height="16" viewBox="0 0 48 48"><rect x="4" y="5" width="10" height="4" fill="#12FF80"/><rect x="4" y="5" width="4" height="38" fill="#12FF80"/><rect x="4" y="39" width="10" height="4" fill="#12FF80"/><rect x="34" y="5" width="10" height="4" fill="#5FDDFF"/><rect x="40" y="5" width="4" height="38" fill="#5FDDFF"/><rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/><polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/></svg></div>
       <div class="fav-label">16px</div>
     </div>
   </div>
 
 </div>
 
-<footer style="text-align:center;padding:24px;font-size:11px;color:var(--border);border-top:1px solid var(--surface)">
-  EmFi Brand Identity · emfi.dev · #12FF80 · #5FDDFF · #121312
+<footer style="text-align:center;padding:24px;font-size:11px;color:var(--border);border-top:1px solid var(--surface);font-family:'JetBrains Mono',monospace">
+  [emfi] · embedded finance infrastructure · #12FF80 · #5FDDFF
 </footer>
 
 </body>

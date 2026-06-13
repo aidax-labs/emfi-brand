@@ -1,0 +1,10 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- [ left bracket — green -->
+  <rect x="5"  y="5"  width="13" height="4" fill="#12FF80"/>
+  <rect x="5"  y="5"  width="4"  height="38" fill="#12FF80"/>
+  <rect x="5"  y="39" width="13" height="4" fill="#12FF80"/>
+  <!-- ] right bracket — cyan -->
+  <rect x="30" y="5"  width="13" height="4" fill="#5FDDFF"/>
+  <rect x="39" y="5"  width="4"  height="38" fill="#5FDDFF"/>
+  <rect x="30" y="39" width="13" height="4" fill="#5FDDFF"/>
+</svg>

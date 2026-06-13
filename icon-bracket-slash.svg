@@ -1,0 +1,12 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- [ left — green -->
+  <rect x="4"  y="5"  width="10" height="4" fill="#12FF80"/>
+  <rect x="4"  y="5"  width="4"  height="38" fill="#12FF80"/>
+  <rect x="4"  y="39" width="10" height="4" fill="#12FF80"/>
+  <!-- ] right — cyan -->
+  <rect x="34" y="5"  width="10" height="4" fill="#5FDDFF"/>
+  <rect x="40" y="5"  width="4"  height="38" fill="#5FDDFF"/>
+  <rect x="34" y="39" width="10" height="4" fill="#5FDDFF"/>
+  <!-- / slash — mint -->
+  <polygon points="27,8 32,8 21,40 16,40" fill="#B0FFC9"/>
+</svg>
