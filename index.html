@@ -5,8 +5,27 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>EmFi — Brand Identity · Bracket Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
+  @font-face {
+    font-family: 'Citerne';
+    font-weight: 300;
+    font-display: swap;
+    src: url('./fonts/Citerne-Light.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Citerne';
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/Citerne-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Citerne';
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/Citerne-Medium.woff2') format('woff2');
+  }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --green:   #12FF80;
@@ -18,7 +37,7 @@
     --border:  #636669;
     --white:   #FFFFFF;
   }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); }
+  body { font-family: 'Citerne', -apple-system, sans-serif; background: var(--black); color: var(--white); }
   .mono { font-family: 'JetBrains Mono', 'SF Mono', monospace; }
 
   header { padding: 36px 48px 28px; border-bottom: 1px solid var(--surface); }
@@ -50,8 +69,9 @@
     font-size: 22px; font-weight: 600; margin-bottom: 8px;
   }
   .concept-wordmark {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 8px;
+    font-family: 'Citerne', sans-serif;
+    font-size: 22px; font-weight: 500; color: var(--white); margin-bottom: 8px;
+    letter-spacing: -0.5px;
   }
   .concept-sub { font-size: 12px; color: var(--border); margin-bottom: 28px; line-height: 1.5; }
 
@@ -62,8 +82,9 @@
   }
   .small-preview svg { width: 32px; height: 32px; flex-shrink: 0; }
   .small-preview .wm {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 17px; font-weight: 600; color: var(--white);
+    font-family: 'Citerne', sans-serif;
+    font-size: 18px; font-weight: 500; color: var(--white);
+    letter-spacing: -0.5px;
   }
 
   /* ── Lockups ── */
@@ -83,8 +104,9 @@
   }
   .wm-item { display: flex; flex-direction: column; gap: 6px; }
   .wm-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 600; color: var(--green);
+    font-family: 'Citerne', sans-serif;
+    font-weight: 500; color: var(--green);
+    letter-spacing: -0.5px;
   }
   .wm-desc { font-size: 11px; color: var(--border); }
 
@@ -202,7 +224,7 @@
       <div class="logo-bg">
         <svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="4" width="11" height="4" fill="#12FF80"/><rect x="2" y="4" width="4" height="44" fill="#12FF80"/><rect x="2" y="44" width="11" height="4" fill="#12FF80"/>
-          <text x="20" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <text x="20" y="38" font-family="'Citerne', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
           <rect x="107" y="4" width="11" height="4" fill="#5FDDFF"/><rect x="114" y="4" width="4" height="44" fill="#5FDDFF"/><rect x="107" y="44" width="11" height="4" fill="#5FDDFF"/>
         </svg>
       </div>
@@ -214,7 +236,7 @@
         <svg viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="4" width="10" height="4" fill="#12FF80"/><rect x="2" y="4" width="4" height="44" fill="#12FF80"/><rect x="2" y="44" width="10" height="4" fill="#12FF80"/>
           <polygon points="22,6 28,6 18,46 12,46" fill="#B0FFC9"/>
-          <text x="36" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <text x="36" y="38" font-family="'Citerne', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
           <rect x="127" y="4" width="10" height="4" fill="#5FDDFF"/><rect x="133" y="4" width="4" height="44" fill="#5FDDFF"/><rect x="127" y="44" width="10" height="4" fill="#5FDDFF"/>
         </svg>
       </div>
@@ -225,7 +247,7 @@
       <div class="logo-bg">
         <svg viewBox="0 0 240 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18,4 Q10,4 10,11 L10,21 Q10,25 5,26 Q10,27 10,31 L10,41 Q10,48 18,48" stroke="#12FF80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <text x="26" y="38" font-family="'Inter',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+          <text x="26" y="38" font-family="'Citerne', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
           <path d="M113,4 Q121,4 121,11 L121,21 Q121,25 126,26 Q121,27 121,31 L121,41 Q121,48 113,48" stroke="#5FDDFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
       </div>
