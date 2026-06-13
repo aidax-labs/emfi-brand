@@ -1,442 +1,550 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EmFi — Logo Concepts v1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>EmFi — Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --indigo:  #4F46E5;
+    --violet:  #7C3AED;
+    --dark:    #0F172A;
+    --dark2:   #1E293B;
+    --emerald: #10B981;
+    --white:   #FFFFFF;
+    --light:   #F8F9FC;
+    --gray:    #64748B;
+    --slate:   #334155;
+  }
+
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #F1F5F9;
-    color: #0F172A;
-    padding: 48px 40px;
+    background: var(--dark);
+    color: var(--white);
     min-height: 100vh;
   }
 
-  header { margin-bottom: 48px; }
-  header .label {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; color: #94A3B8;
+  /* ── Header ── */
+  header {
+    padding: 40px 48px 32px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
   }
-  header h1 { font-size: 26px; font-weight: 700; margin-top: 4px; }
-  header p { font-size: 13px; color: #64748B; margin-top: 6px; max-width: 560px; line-height: 1.6; }
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .brand-name {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, var(--indigo), var(--violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .brand-tag {
+    font-size: 13px;
+    color: var(--gray);
+    font-weight: 400;
+    letter-spacing: .02em;
+  }
 
-  .grid {
+  /* ── Section label ── */
+  .section { max-width: 1280px; margin: 0 auto; padding: 0 48px 64px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    padding: 48px 0 28px;
+  }
+
+  /* ── Concept grid ── */
+  .concept-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 24px;
-    max-width: 1160px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
-  .card {
-    background: white;
+  .concept-card {
+    background: var(--dark2);
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.05);
+    transition: border-color .2s;
+  }
+  .concept-card:hover { border-color: rgba(124, 58, 237, .35); }
+
+  .icon-wrap {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .icon-wrap svg { width: 100%; height: 100%; }
+
+  .concept-wordmark {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .concept-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .concept-sub {
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 32px;
   }
 
-  .preview {
-    padding: 52px 48px;
-    display: flex; align-items: center; justify-content: center;
-    min-height: 160px;
+  /* Light bg preview */
+  .light-preview {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
-  .preview.white  { background: #FFFFFF; border-bottom: 1px solid #F8FAFC; }
-  .preview.dark1  { background: #0F172A; }
-  .preview.dark2  { background: #0C1A2E; }
-  .preview.dark3  { background: #083344; }
-
-  .body { padding: 28px; }
-
-  .concept-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: #CBD5E1; margin-bottom: 4px;
-  }
-  .concept-name { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-  .concept-desc { font-size: 13px; color: #64748B; line-height: 1.65; margin-bottom: 24px; }
-
-  .section-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #CBD5E1; margin-bottom: 10px;
+  .light-preview .icon-sm { width: 36px; height: 36px; flex-shrink: 0; }
+  .light-preview .icon-sm svg { width: 100%; height: 100%; }
+  .light-preview .wm-sm {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    color: var(--dark);
   }
 
-  .palette { display: flex; gap: 10px; margin-bottom: 24px; align-items: center; }
-  .sw-wrap { text-align: center; }
-  .sw {
-    width: 34px; height: 34px; border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.06); margin-bottom: 4px;
+  /* ── Logo lockups ── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
-  .sw-hex { font-size: 9px; color: #94A3B8; font-weight: 500; font-family: monospace; }
+  .logo-card {
+    background: var(--dark2);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid rgba(255,255,255,.05);
+  }
+  .logo-dark { background: var(--dark2); border-radius: 10px; padding: 20px; }
+  .logo-dark svg { width: 100%; height: auto; }
+  .logo-dark svg text { fill: var(--white) !important; }
+  .logo-light { background: var(--light); border-radius: 10px; padding: 20px; }
+  .logo-light svg { width: 100%; height: auto; }
+  .logo-label { font-size: 11px; color: var(--gray); letter-spacing: .06em; text-transform: uppercase; }
 
-  .sizes { display: flex; gap: 20px; align-items: flex-end; margin-bottom: 20px; }
-  .size-item { text-align: center; }
-  .size-label { font-size: 10px; color: #CBD5E1; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-  .size-box {
-    background: #F8FAFC; border: 1px solid #F1F5F9; border-radius: 8px;
-    padding: 8px; display: inline-flex; align-items: center; justify-content: center;
+  /* ── Palette ── */
+  .palette-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .swatch {
+    flex: 1;
+    min-width: 100px;
+    height: 56px;
+    border-radius: 10px;
+    position: relative;
   }
-  .size-box.dk { background: #0F172A; border-color: #1E293B; }
+  .swatch-label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: .02em;
+  }
+  .swatch-hex { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 11px; color: var(--slate); }
 
-  .rationale {
-    background: #F8FAFC; border-radius: 10px; padding: 14px 16px;
-    border-left: 3px solid; margin-top: 4px;
+  /* ── Favicon test ── */
+  .favicon-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
   }
-  .rationale p { font-size: 12px; color: #64748B; line-height: 1.6; }
-  .rationale strong { color: #334155; font-weight: 600; }
+  .fav-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .fav-label { font-size: 11px; color: var(--gray); }
+  .fav-bg-dark  { background: var(--dark);  padding: 6px; border-radius: 6px; }
+  .fav-bg-light { background: var(--light); padding: 6px; border-radius: 6px; }
+
+  /* ── Divider ── */
+  .grad-line {
+    height: 2px;
+    background: linear-gradient(90deg, var(--indigo), var(--violet));
+    opacity: .4;
+    border-radius: 2px;
+    margin-bottom: 0;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="label">brandmark-studio · emfi.dev · v1.0</div>
-  <h1>Logo Concepts</h1>
-  <p>Tres conceptos distintos en vector SVG. Archetype: <strong>Ruler + Creator</strong>. Estilo: Modern Geometric. Principios: Silhouette Strength, Scalability, Negative Space.</p>
+  <div class="header-inner">
+    <span class="brand-name">emfi</span>
+    <span class="brand-tag">Brand Identity · Silicon Valley Edition · 2026</span>
+  </div>
 </header>
 
-<div class="grid">
+<div class="section">
 
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ CONCEPT 1: LAYER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="card">
+  <p class="section-title">Logo Concepts</p>
 
-    <!-- White bg -->
-    <div class="preview white">
-      <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" height="48">
-        <rect x="0" y="4"  width="40" height="8" rx="4" fill="#1D4ED8"/>
-        <rect x="0" y="18" width="27" height="8" rx="4" fill="#1D4ED8"/>
-        <rect x="0" y="32" width="40" height="8" rx="4" fill="#1D4ED8"/>
-        <text x="52" y="34" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#0F172A" letter-spacing="-1">emfi</text>
-      </svg>
-    </div>
+  <div class="concept-grid">
 
-    <!-- Dark bg -->
-    <div class="preview dark1">
-      <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" height="48">
-        <rect x="0" y="4"  width="40" height="8" rx="4" fill="#60A5FA"/>
-        <rect x="0" y="18" width="27" height="8" rx="4" fill="#60A5FA"/>
-        <rect x="0" y="32" width="40" height="8" rx="4" fill="#60A5FA"/>
-        <text x="52" y="34" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#FFFFFF" letter-spacing="-1">emfi</text>
-      </svg>
-    </div>
-
-    <div class="body">
-      <div class="concept-label">Concept 01</div>
-      <div class="concept-name">Layer</div>
-      <div class="concept-desc">
-        Tres barras horizontales forman la letra "E" y representan las capas de
-        una API REST, los flujos de datos financieros, y la abstracción de sistemas
-        complejos. La barra central más corta crea ritmo y sugiere profundidad.
-        El más minimalista — escala perfectamente a 16px.
+    <!-- Concept 1: E-Mark -->
+    <div class="concept-card">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <rect x="6"  y="5"  width="9"  height="38" fill="url(#g1)"/>
+          <rect x="15" y="5"  width="27" height="9"  fill="url(#g1)"/>
+          <rect x="15" y="20" width="18" height="9"  fill="url(#g1)"/>
+          <rect x="15" y="34" width="27" height="9"  fill="url(#g1)"/>
+        </svg>
       </div>
+      <div class="concept-wordmark">emfi</div>
+      <div class="concept-name" style="color:#4F46E5">Mark</div>
+      <div class="concept-sub">Geometric letterform · Timeless</div>
 
-      <div class="section-label">Paleta de color</div>
-      <div class="palette">
-        <div class="sw-wrap">
-          <div class="sw" style="background:#1D4ED8"></div>
-          <div class="sw-hex">#1D4ED8</div>
+      <div class="light-preview">
+        <div class="icon-sm">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1b" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0">
+                <stop offset="0%" stop-color="#4F46E5"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+            <rect x="6"  y="5"  width="9"  height="38" fill="url(#g1b)"/>
+            <rect x="15" y="5"  width="27" height="9"  fill="url(#g1b)"/>
+            <rect x="15" y="20" width="18" height="9"  fill="url(#g1b)"/>
+            <rect x="15" y="34" width="27" height="9"  fill="url(#g1b)"/>
+          </svg>
         </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#60A5FA"></div>
-          <div class="sw-hex">#60A5FA</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#0F172A"></div>
-          <div class="sw-hex">#0F172A</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#EFF6FF; border-color:#BFDBFE"></div>
-          <div class="sw-hex">#EFF6FF</div>
-        </div>
-      </div>
-
-      <div class="section-label">Escalado del icono</div>
-      <div class="sizes">
-        <div class="size-item">
-          <div class="size-label">64px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-              <rect x="4" y="8"  width="40" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="22" width="27" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="36" width="40" height="8" rx="4" fill="#1D4ED8"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">32px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <rect x="4" y="8"  width="40" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="22" width="27" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="36" width="40" height="8" rx="4" fill="#1D4ED8"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">16px fav</div>
-          <div class="size-box">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <rect x="4" y="8"  width="40" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="22" width="27" height="8" rx="4" fill="#1D4ED8"/>
-              <rect x="4" y="36" width="40" height="8" rx="4" fill="#1D4ED8"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">dark</div>
-          <div class="size-box dk">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <rect x="4" y="8"  width="40" height="8" rx="4" fill="#60A5FA"/>
-              <rect x="4" y="22" width="27" height="8" rx="4" fill="#60A5FA"/>
-              <rect x="4" y="36" width="40" height="8" rx="4" fill="#60A5FA"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="rationale" style="border-color:#1D4ED8">
-        <p>
-          <strong>Arquetipo:</strong> Ruler + Creator ·
-          <strong>Estilo:</strong> Modern Minimalist ·
-          <strong>Principios:</strong> Silhouette Strength, Scalability, Negative Space.
-          Funciona a 16px sin perder legibilidad. Óptimo para favicon, npm badge, y docs de API.
-        </p>
+        <div class="wm-sm">emfi</div>
       </div>
     </div>
-  </div>
 
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ CONCEPT 2: GATE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="card">
-
-    <div class="preview white">
-      <svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg" height="52">
-        <!-- Chevron 1 (darker) -->
-        <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#0369A1"/>
-        <!-- Chevron 2 (lighter) -->
-        <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#0EA5E9"/>
-        <text x="50" y="36" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#0F172A" letter-spacing="-1">emfi</text>
-      </svg>
-    </div>
-
-    <div class="preview dark2">
-      <svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg" height="52">
-        <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#38BDF8"/>
-        <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#7DD3FC"/>
-        <text x="50" y="36" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#FFFFFF" letter-spacing="-1">emfi</text>
-      </svg>
-    </div>
-
-    <div class="body">
-      <div class="concept-label">Concept 02</div>
-      <div class="concept-name">Gate</div>
-      <div class="concept-desc">
-        Doble chevron "»" — routing de API, acceso a dos mercados (EU + LatAm),
-        flujo de dinero continuo. La progresión oscuro→claro sugiere la simplificación
-        que ofrece EmFi: dos sistemas complejos se convierten en un único punto de acceso.
-        Dinámico y con energía hacia adelante.
+    <!-- Concept 2: Slash -->
+    <div class="concept-card">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="13,5 21,5 13,44 5,44" fill="#4F46E5"/>
+          <polygon points="27,5 35,5 27,44 19,44" fill="#7C3AED"/>
+          <circle cx="33" cy="5" r="4" fill="#10B981"/>
+        </svg>
       </div>
+      <div class="concept-wordmark">emfi</div>
+      <div class="concept-name" style="color:#6D3AEA">Slash</div>
+      <div class="concept-sub">Developer · API-first · Forward</div>
 
-      <div class="section-label">Paleta de color</div>
-      <div class="palette">
-        <div class="sw-wrap">
-          <div class="sw" style="background:#0369A1"></div>
-          <div class="sw-hex">#0369A1</div>
+      <div class="light-preview">
+        <div class="icon-sm">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="13,5 21,5 13,44 5,44" fill="#4F46E5"/>
+            <polygon points="27,5 35,5 27,44 19,44" fill="#7C3AED"/>
+            <circle cx="33" cy="5" r="4" fill="#10B981"/>
+          </svg>
         </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#0EA5E9"></div>
-          <div class="sw-hex">#0EA5E9</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#0C1A2E"></div>
-          <div class="sw-hex">#0C1A2E</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#E0F2FE; border-color:#BAE6FD"></div>
-          <div class="sw-hex">#E0F2FE</div>
-        </div>
-      </div>
-
-      <div class="section-label">Escalado del icono</div>
-      <div class="sizes">
-        <div class="size-item">
-          <div class="size-label">64px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-              <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#0369A1"/>
-              <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#0EA5E9"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">32px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#0369A1"/>
-              <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#0EA5E9"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">16px fav</div>
-          <div class="size-box">
-            <svg viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#0369A1"/>
-              <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#0EA5E9"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">dark</div>
-          <div class="size-box dk">
-            <svg viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <path d="M2,6 L20,26 L2,46 L9,46 L14,26 L9,6 Z" fill="#38BDF8"/>
-              <path d="M17,6 L35,26 L17,46 L24,46 L29,26 L24,6 Z" fill="#7DD3FC"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="rationale" style="border-color:#0EA5E9">
-        <p>
-          <strong>Arquetipo:</strong> Explorer + Creator ·
-          <strong>Estilo:</strong> Modern Swiss ·
-          <strong>Principios:</strong> Asymmetry, Focal Point, Contrast.
-          La dualidad de los chevrons representa Swan (EU) + Pomelo (LatAm) fluyendo hacia un punto de acceso común.
-        </p>
+        <div class="wm-sm">emfi</div>
       </div>
     </div>
-  </div>
 
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ CONCEPT 3: NODE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="card">
+    <!-- Concept 3: Arc -->
+    <div class="concept-card">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ga3" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <path d="M4,38 A20,20 0 0,1 44,38"
+                stroke="url(#ga3)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="concept-wordmark">emfi</div>
+      <div class="concept-name" style="color:#7C3AED">Arc</div>
+      <div class="concept-sub">Connect · Unified API · Bridge</div>
 
-    <div class="preview white">
-      <svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg" height="52">
-        <!-- Hex ring via evenodd compound path -->
-        <path fill-rule="evenodd"
-          d="M25,1 L44,12 L44,34 L25,45 L6,34 L6,12 Z
-             M25,11 L37,18 L37,28 L25,35 L13,28 L13,18 Z"
-          fill="#0E7490"/>
-        <text x="56" y="36" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#0F172A" letter-spacing="-1">emfi</text>
-      </svg>
+      <div class="light-preview">
+        <div class="icon-sm">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ga3b" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0">
+                <stop offset="0%" stop-color="#4F46E5"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+            <path d="M4,38 A20,20 0 0,1 44,38"
+                  stroke="url(#ga3b)" stroke-width="9" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="wm-sm">emfi</div>
+      </div>
     </div>
 
-    <div class="preview dark3">
-      <svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg" height="52">
-        <path fill-rule="evenodd"
-          d="M25,1 L44,12 L44,34 L25,45 L6,34 L6,12 Z
-             M25,11 L37,18 L37,28 L25,35 L13,28 L13,18 Z"
-          fill="#67E8F9"/>
-        <text x="56" y="36" font-family="'Inter', -apple-system, sans-serif"
-              font-size="26" font-weight="600" fill="#FFFFFF" letter-spacing="-1">emfi</text>
-      </svg>
+  </div><!-- /concept-grid -->
+
+  <p class="section-title" style="margin-top:24px">Horizontal Lockups</p>
+
+  <div class="logo-grid">
+
+    <!-- E-Mark lockup -->
+    <div class="logo-card">
+      <div class="logo-label">Mark — Dark</div>
+      <div class="logo-dark">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1d" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="40" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <rect x="4"  y="3"  width="8"  height="46" fill="url(#lg1d)"/>
+          <rect x="12" y="3"  width="28" height="9"  fill="url(#lg1d)"/>
+          <rect x="12" y="21" width="20" height="9"  fill="url(#lg1d)"/>
+          <rect x="12" y="40" width="28" height="9"  fill="url(#lg1d)"/>
+          <text x="56" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+        </svg>
+      </div>
+      <div class="logo-light">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1l" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="40" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <rect x="4"  y="3"  width="8"  height="46" fill="url(#lg1l)"/>
+          <rect x="12" y="3"  width="28" height="9"  fill="url(#lg1l)"/>
+          <rect x="12" y="21" width="20" height="9"  fill="url(#lg1l)"/>
+          <rect x="12" y="40" width="28" height="9"  fill="url(#lg1l)"/>
+          <text x="56" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-1.5">emfi</text>
+        </svg>
+      </div>
     </div>
 
-    <div class="body">
-      <div class="concept-label">Concept 03</div>
-      <div class="concept-name">Node</div>
-      <div class="concept-desc">
-        Anillo hexagonal — nodo de red, infraestructura API, honeycomb.
-        El hexágono es el símbolo de las estructuras eficientes en la naturaleza y la tecnología.
-        El ring sugiere que EmFi es la capa que envuelve y conecta sistemas financieros complejos
-        sin reemplazarlos. El más técnico y distintivo de los tres.
+    <!-- Slash lockup -->
+    <div class="logo-card">
+      <div class="logo-label">Slash — Dark</div>
+      <div class="logo-dark">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="9,5 17,5 9,47 1,47" fill="#4F46E5"/>
+          <polygon points="22,5 30,5 22,47 14,47" fill="#7C3AED"/>
+          <circle cx="28" cy="5" r="4" fill="#10B981"/>
+          <text x="46" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+        </svg>
       </div>
+      <div class="logo-light">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="9,5 17,5 9,47 1,47" fill="#4F46E5"/>
+          <polygon points="22,5 30,5 22,47 14,47" fill="#7C3AED"/>
+          <circle cx="28" cy="5" r="4" fill="#10B981"/>
+          <text x="46" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-1.5">emfi</text>
+        </svg>
+      </div>
+    </div>
 
-      <div class="section-label">Paleta de color</div>
-      <div class="palette">
-        <div class="sw-wrap">
-          <div class="sw" style="background:#0E7490"></div>
-          <div class="sw-hex">#0E7490</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#06B6D4"></div>
-          <div class="sw-hex">#06B6D4</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#083344"></div>
-          <div class="sw-hex">#083344</div>
-        </div>
-        <div class="sw-wrap">
-          <div class="sw" style="background:#ECFEFF; border-color:#CFFAFE"></div>
-          <div class="sw-hex">#ECFEFF</div>
-        </div>
+    <!-- Arc lockup -->
+    <div class="logo-card">
+      <div class="logo-label">Arc — Dark</div>
+      <div class="logo-dark">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lgad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="46" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <path d="M2,44 A22,22 0 0,1 46,44" stroke="url(#lgad)" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <text x="62" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
+        </svg>
       </div>
+      <div class="logo-light">
+        <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lgal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="46" y2="0">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <path d="M2,44 A22,22 0 0,1 46,44" stroke="url(#lgal)" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <text x="62" y="39" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-1.5">emfi</text>
+        </svg>
+      </div>
+    </div>
 
-      <div class="section-label">Escalado del icono</div>
-      <div class="sizes">
-        <div class="size-item">
-          <div class="size-label">64px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-              <path fill-rule="evenodd"
-                d="M25,2 L44,13 L44,37 L25,48 L6,37 L6,13 Z
-                   M25,12 L37,19 L37,31 L25,38 L13,31 L13,19 Z"
-                fill="#0E7490"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">32px</div>
-          <div class="size-box">
-            <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <path fill-rule="evenodd"
-                d="M25,2 L44,13 L44,37 L25,48 L6,37 L6,13 Z
-                   M25,12 L37,19 L37,31 L25,38 L13,31 L13,19 Z"
-                fill="#0E7490"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">16px fav</div>
-          <div class="size-box">
-            <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path fill-rule="evenodd"
-                d="M25,2 L44,13 L44,37 L25,48 L6,37 L6,13 Z
-                   M25,12 L37,19 L37,31 L25,38 L13,31 L13,19 Z"
-                fill="#0E7490"/>
-            </svg>
-          </div>
-        </div>
-        <div class="size-item">
-          <div class="size-label">dark</div>
-          <div class="size-box dk">
-            <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-              <path fill-rule="evenodd"
-                d="M25,2 L44,13 L44,37 L25,48 L6,37 L6,13 Z
-                   M25,12 L37,19 L37,31 L25,38 L13,31 L13,19 Z"
-                fill="#67E8F9"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+  </div><!-- /logo-grid -->
 
-      <div class="rationale" style="border-color:#0E7490">
-        <p>
-          <strong>Arquetipo:</strong> Ruler + Sage ·
-          <strong>Estilo:</strong> Geometric + Futuristic ·
-          <strong>Principios:</strong> Negative Space, Visual Balance, Proportion.
-          El ring de 9 unidades de grosor es visible incluso a 16px. Diferenciado del ecosistema fintech actual.
-        </p>
-      </div>
+  <p class="section-title">Color Palette</p>
+
+  <div class="palette-row">
+    <div>
+      <div class="swatch" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)"></div>
+      <div class="swatch-label">Primary Gradient</div>
+      <div class="swatch-hex">#4F46E5 → #7C3AED</div>
+    </div>
+    <div>
+      <div class="swatch" style="background:#4F46E5"></div>
+      <div class="swatch-label">Indigo 600</div>
+      <div class="swatch-hex">#4F46E5</div>
+    </div>
+    <div>
+      <div class="swatch" style="background:#7C3AED"></div>
+      <div class="swatch-label">Violet 600</div>
+      <div class="swatch-hex">#7C3AED</div>
+    </div>
+    <div>
+      <div class="swatch" style="background:#0F172A;border:1px solid #1E293B"></div>
+      <div class="swatch-label">Slate 950</div>
+      <div class="swatch-hex">#0F172A</div>
+    </div>
+    <div>
+      <div class="swatch" style="background:#1E293B"></div>
+      <div class="swatch-label">Slate 800</div>
+      <div class="swatch-hex">#1E293B</div>
+    </div>
+    <div>
+      <div class="swatch" style="background:#10B981"></div>
+      <div class="swatch-label">Emerald 500</div>
+      <div class="swatch-hex">#10B981</div>
     </div>
   </div>
 
-</div>
+  <p class="section-title">Favicon Scale Test</p>
 
-<!-- Footer note -->
-<div style="margin-top: 40px; max-width: 1160px;">
-  <p style="font-size: 12px; color: #CBD5E1; line-height: 1.7;">
-    Todos los assets son SVG vectorial — escalables a cualquier resolución. Los textos usan Inter (Google Fonts).
-    Para producción: exportar icono como SVG standalone, convertir texto a path, y generar versiones monochrome y reverse.
-    Fuentes recomendadas para el wordmark: Inter 600 · Geist · DM Sans · Sora.
-  </p>
-</div>
+  <div class="favicon-row">
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="64" height="64" viewBox="0 0 48 48">
+          <defs><linearGradient id="fv64" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <rect x="6" y="5" width="9" height="38" fill="url(#fv64)"/>
+          <rect x="15" y="5" width="27" height="9" fill="url(#fv64)"/>
+          <rect x="15" y="20" width="18" height="9" fill="url(#fv64)"/>
+          <rect x="15" y="34" width="27" height="9" fill="url(#fv64)"/>
+        </svg>
+      </div>
+      <div class="fav-label">64px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="32" height="32" viewBox="0 0 48 48">
+          <defs><linearGradient id="fv32" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <rect x="6" y="5" width="9" height="38" fill="url(#fv32)"/>
+          <rect x="15" y="5" width="27" height="9" fill="url(#fv32)"/>
+          <rect x="15" y="20" width="18" height="9" fill="url(#fv32)"/>
+          <rect x="15" y="34" width="27" height="9" fill="url(#fv32)"/>
+        </svg>
+      </div>
+      <div class="fav-label">32px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="16" height="16" viewBox="0 0 48 48">
+          <defs><linearGradient id="fv16" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <rect x="6" y="5" width="9" height="38" fill="url(#fv16)"/>
+          <rect x="15" y="5" width="27" height="9" fill="url(#fv16)"/>
+          <rect x="15" y="20" width="18" height="9" fill="url(#fv16)"/>
+          <rect x="15" y="34" width="27" height="9" fill="url(#fv16)"/>
+        </svg>
+      </div>
+      <div class="fav-label">16px</div>
+    </div>
+
+    <!-- Slash favicons -->
+    <div class="fav-item" style="margin-left:40px">
+      <div class="fav-bg-dark">
+        <svg width="64" height="64" viewBox="0 0 48 48">
+          <polygon points="13,5 21,5 13,44 5,44" fill="#4F46E5"/>
+          <polygon points="27,5 35,5 27,44 19,44" fill="#7C3AED"/>
+          <circle cx="33" cy="5" r="4" fill="#10B981"/>
+        </svg>
+      </div>
+      <div class="fav-label">64px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="32" height="32" viewBox="0 0 48 48">
+          <polygon points="13,5 21,5 13,44 5,44" fill="#4F46E5"/>
+          <polygon points="27,5 35,5 27,44 19,44" fill="#7C3AED"/>
+          <circle cx="33" cy="5" r="4" fill="#10B981"/>
+        </svg>
+      </div>
+      <div class="fav-label">32px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="16" height="16" viewBox="0 0 48 48">
+          <polygon points="13,5 21,5 13,44 5,44" fill="#4F46E5"/>
+          <polygon points="27,5 35,5 27,44 19,44" fill="#7C3AED"/>
+        </svg>
+      </div>
+      <div class="fav-label">16px</div>
+    </div>
+
+    <!-- Arc favicons -->
+    <div class="fav-item" style="margin-left:40px">
+      <div class="fav-bg-dark">
+        <svg width="64" height="64" viewBox="0 0 48 48">
+          <defs><linearGradient id="fva64" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fva64)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="fav-label">64px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="32" height="32" viewBox="0 0 48 48">
+          <defs><linearGradient id="fva32" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fva32)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="fav-label">32px</div>
+    </div>
+    <div class="fav-item">
+      <div class="fav-bg-dark">
+        <svg width="16" height="16" viewBox="0 0 48 48">
+          <defs><linearGradient id="fva16" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+          <path d="M4,38 A20,20 0 0,1 44,38" stroke="url(#fva16)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="fav-label">16px</div>
+    </div>
+  </div>
+
+</div><!-- /section -->
+
+<footer style="text-align:center;padding:24px;font-size:11px;color:var(--slate);border-top:1px solid rgba(255,255,255,.04)">
+  EmFi Brand Identity · emfi.dev · Embedded Finance Infrastructure
+</footer>
 
 </body>
 </html>

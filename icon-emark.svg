@@ -1,0 +1,16 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="42" y2="0">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- vertical bar -->
+  <rect x="6"  y="5"  width="9"  height="38" fill="url(#g)"/>
+  <!-- top bar -->
+  <rect x="15" y="5"  width="27" height="9"  fill="url(#g)"/>
+  <!-- mid bar (shorter) -->
+  <rect x="15" y="20" width="18" height="9"  fill="url(#g)"/>
+  <!-- bottom bar -->
+  <rect x="15" y="34" width="27" height="9"  fill="url(#g)"/>
+</svg>
