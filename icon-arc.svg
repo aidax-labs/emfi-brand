@@ -1,11 +1,10 @@
 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="ga" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="0">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#12FF80"/>
+      <stop offset="100%" stop-color="#5FDDFF"/>
     </linearGradient>
   </defs>
-  <!-- thick semicircular arc -->
   <path d="M4,38 A20,20 0 0,1 44,38"
         stroke="url(#ga)" stroke-width="9" stroke-linecap="round" fill="none"/>
 </svg>

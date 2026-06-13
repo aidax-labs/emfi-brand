@@ -1,8 +1,8 @@
 <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="40" y2="0">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#0cb259"/>
+      <stop offset="100%" stop-color="#12FF80"/>
     </linearGradient>
   </defs>
   <rect x="4"  y="3"  width="8"  height="46" fill="url(#g)"/>
@@ -11,5 +11,5 @@
   <rect x="12" y="40" width="28" height="9"  fill="url(#g)"/>
   <text x="56" y="39"
         font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-        font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-1.5">emfi</text>
+        font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
 </svg>

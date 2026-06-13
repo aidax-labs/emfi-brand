@@ -1,8 +1,8 @@
 <svg viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="9,5 17,5 9,47 1,47" fill="#4F46E5"/>
-  <polygon points="22,5 30,5 22,47 14,47" fill="#7C3AED"/>
-  <circle cx="28" cy="5" r="4" fill="#10B981"/>
+  <polygon points="9,5 17,5 9,47 1,47"   fill="#12FF80"/>
+  <polygon points="22,5 30,5 22,47 14,47" fill="#5FDDFF"/>
+  <circle cx="28" cy="5" r="4" fill="#5FDDFF"/>
   <text x="46" y="39"
         font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-        font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-1.5">emfi</text>
+        font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">emfi</text>
 </svg>
