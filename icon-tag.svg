@@ -1,0 +1,13 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- < left angle — green -->
+  <polyline points="17,7 7,24 17,41"
+            stroke="#12FF80" stroke-width="4.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- / slash — mint -->
+  <line x1="27" y1="7" x2="21" y2="41"
+        stroke="#B0FFC9" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- > right angle — cyan -->
+  <polyline points="31,7 41,24 31,41"
+            stroke="#5FDDFF" stroke-width="4.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>EmFi — Brand Identity · Bracket Concepts</title>
+<title>EmFi — Brand Identity · Tag &amp; Bracket Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
@@ -129,15 +129,124 @@
 
 <header>
   <div class="header-inner">
-    <span class="brand-name">[emfi]</span>
-    <span class="brand-tag">Brand Identity · Bracket Concepts · emfi.dev</span>
+    <span class="brand-name" style="font-family:'Citerne',sans-serif;font-weight:500"><span style="color:#12FF80">&lt;/</span>emfi<span style="color:#5FDDFF">&gt;</span></span>
+    <span class="brand-tag">Brand Identity · Tag &amp; Bracket Concepts · emfi.dev</span>
   </div>
 </header>
 <div class="grad-line"></div>
 
 <div class="section">
 
-  <p class="section-title">Concepts</p>
+  <!-- ═══════════════════════════════════════════ HTML TAG CONCEPTS ═══ -->
+  <p class="section-title">HTML Tag Concepts · Google-style</p>
+
+  <!-- Hero wordmark display -->
+  <div style="background:var(--surface);border-radius:20px;padding:48px 40px;margin-bottom:16px;border:1px solid rgba(255,255,255,.05)">
+
+    <!-- Large hero: </emfi> -->
+    <div style="text-align:center;margin-bottom:48px">
+      <div style="font-family:'Citerne',sans-serif;font-size:72px;font-weight:500;line-height:1;letter-spacing:-2px">
+        <span style="color:#12FF80">&lt;</span><span style="color:#B0FFC9">/</span><span style="color:#ffffff">emfi</span><span style="color:#5FDDFF">&gt;</span>
+      </div>
+      <div style="font-size:11px;color:var(--border);letter-spacing:.12em;text-transform:uppercase;margin-top:16px">Closing tag · Recommended</div>
+    </div>
+
+    <!-- Three variants side by side -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+
+      <!-- </emfi> -->
+      <div style="background:var(--black);border-radius:14px;padding:32px 24px;text-align:center;border:1px solid rgba(18,255,128,.2)">
+        <div style="font-family:'Citerne',sans-serif;font-size:36px;font-weight:500;letter-spacing:-1px;margin-bottom:16px">
+          <span style="color:#12FF80">&lt;</span><span style="color:#B0FFC9">/</span><span style="color:#fff">emfi</span><span style="color:#5FDDFF">&gt;</span>
+        </div>
+        <div style="font-size:11px;color:var(--border);font-family:'JetBrains Mono',monospace">&lt;/emfi&gt;</div>
+        <div style="font-size:11px;color:var(--border);margin-top:4px">Closing tag</div>
+      </div>
+
+      <!-- <emfi /> -->
+      <div style="background:var(--black);border-radius:14px;padding:32px 24px;text-align:center;border:1px solid rgba(255,255,255,.06)">
+        <div style="font-family:'Citerne',sans-serif;font-size:36px;font-weight:500;letter-spacing:-1px;margin-bottom:16px">
+          <span style="color:#12FF80">&lt;</span><span style="color:#fff">emfi</span><span style="color:#B0FFC9"> /</span><span style="color:#5FDDFF">&gt;</span>
+        </div>
+        <div style="font-size:11px;color:var(--border);font-family:'JetBrains Mono',monospace">&lt;emfi /&gt;</div>
+        <div style="font-size:11px;color:var(--border);margin-top:4px">Self-closing · JSX</div>
+      </div>
+
+      <!-- <emfi> -->
+      <div style="background:var(--black);border-radius:14px;padding:32px 24px;text-align:center;border:1px solid rgba(255,255,255,.06)">
+        <div style="font-family:'Citerne',sans-serif;font-size:36px;font-weight:500;letter-spacing:-1px;margin-bottom:16px">
+          <span style="color:#12FF80">&lt;</span><span style="color:#fff">emfi</span><span style="color:#5FDDFF">&gt;</span>
+        </div>
+        <div style="font-size:11px;color:var(--border);font-family:'JetBrains Mono',monospace">&lt;emfi&gt;</div>
+        <div style="font-size:11px;color:var(--border);margin-top:4px">Opening tag · Minimal</div>
+      </div>
+
+    </div>
+
+    <!-- Icon + wordmark row -->
+    <div style="margin-top:24px;display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <div style="font-size:11px;color:var(--border);letter-spacing:.08em;text-transform:uppercase;margin-right:8px">Icon</div>
+
+      <!-- Icon: </> at various sizes -->
+      <div style="display:flex;align-items:flex-end;gap:16px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="background:var(--black);border:1px solid var(--surface);padding:8px;border-radius:8px">
+            <svg width="64" height="64" viewBox="0 0 48 48" fill="none">
+              <polyline points="17,7 7,24 17,41" stroke="#12FF80" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="27" y1="7" x2="21" y2="41" stroke="#B0FFC9" stroke-width="4.5" stroke-linecap="round"/>
+              <polyline points="31,7 41,24 31,41" stroke="#5FDDFF" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span style="font-size:11px;color:var(--border)">64px</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="background:var(--black);border:1px solid var(--surface);padding:6px;border-radius:6px">
+            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+              <polyline points="17,7 7,24 17,41" stroke="#12FF80" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="27" y1="7" x2="21" y2="41" stroke="#B0FFC9" stroke-width="4.5" stroke-linecap="round"/>
+              <polyline points="31,7 41,24 31,41" stroke="#5FDDFF" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span style="font-size:11px;color:var(--border)">32px</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="background:var(--black);border:1px solid var(--surface);padding:4px;border-radius:5px">
+            <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+              <polyline points="17,7 7,24 17,41" stroke="#12FF80" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="27" y1="7" x2="21" y2="41" stroke="#B0FFC9" stroke-width="5" stroke-linecap="round"/>
+              <polyline points="31,7 41,24 31,41" stroke="#5FDDFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span style="font-size:11px;color:var(--border)">16px</span>
+        </div>
+      </div>
+
+      <div style="width:1px;height:60px;background:var(--surface);margin:0 8px"></div>
+
+      <!-- Lockup: icon + </emfi> -->
+      <div style="display:flex;align-items:center;gap:16px;background:var(--black);border:1px solid var(--surface);border-radius:12px;padding:16px 24px">
+        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+          <polyline points="17,7 7,24 17,41" stroke="#12FF80" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="27" y1="7" x2="21" y2="41" stroke="#B0FFC9" stroke-width="4.5" stroke-linecap="round"/>
+          <polyline points="31,7 41,24 31,41" stroke="#5FDDFF" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-family:'Citerne',sans-serif;font-size:26px;font-weight:500;letter-spacing:-0.5px">
+          <span style="color:#12FF80">&lt;</span><span style="color:#B0FFC9">/</span><span style="color:#fff">emfi</span><span style="color:#5FDDFF">&gt;</span>
+        </div>
+      </div>
+
+      <!-- Tag-only as text lockup -->
+      <div style="display:flex;align-items:center;background:var(--black);border:1px solid var(--surface);border-radius:12px;padding:16px 28px">
+        <div style="font-family:'Citerne',sans-serif;font-size:26px;font-weight:500;letter-spacing:-0.5px">
+          <span style="color:#12FF80">&lt;</span><span style="color:#B0FFC9">/</span><span style="color:#fff">emfi</span><span style="color:#5FDDFF">&gt;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ BRACKET CONCEPTS ════ -->
+  <p class="section-title">Bracket Concepts</p>
 
   <div class="concept-grid">
 

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 200 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- </emfi> — closing tag style -->
+  <text font-family="'Citerne', -apple-system, sans-serif"
+        font-size="34" font-weight="500" y="40" x="4">
+    <tspan fill="#12FF80">&lt;</tspan><tspan fill="#B0FFC9">/</tspan><tspan fill="#FFFFFF">emfi</tspan><tspan fill="#5FDDFF">&gt;</tspan>
+  </text>
+</svg>
